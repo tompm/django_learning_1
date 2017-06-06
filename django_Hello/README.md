@@ -23,21 +23,21 @@ Second, run the server in port 3000:
 		$ python manage.py runserver 3000
 		
 when the terminal displays the contents like:
-		"Performing system checks...
-
+		
+		Performing system checks...
 		System check identified no issues (0 silenced).
 		June 06, 2017 - 15:53:21
 		Django version 1.11.1, using settings 'test1.settings'
 		Starting development server at http://127.0.0.1:3000/
-		Quit the server with CTRL-BREAK."
+		Quit the server with CTRL-BREAK.
+		
 it means server start up successfully
 Third, open another terminal, test the server using 'curl' or 'httpie',
 I used 'httpie' to test the server, since it is more friendly for Windows
 Then we can test:
+
 	>http http://localhost:3000/helloworld/
-	
-	
-	
+		
 	HTTP/1.0 200 OK
 	Content-Length: 374
 	Content-Type: application/json
@@ -81,8 +81,8 @@ We also can use 'POST' request add new data, for example:
 	
 Now we use 'GET' request, the result are:
 
->http http://localhost:3000/helloworld/
 
+	>http http://localhost:3000/helloworld/
 	HTTP/1.0 200 OK
 	Content-Length: 374
 	Content-Type: application/json
